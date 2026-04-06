@@ -1,0 +1,96 @@
+{
+// General configuration
+    "position": "top",
+    "margin-top": 18,
+
+// Order of the modules
+    "modules-center": [
+	"clock",
+	"network",
+	"battery",
+	"pulseaudio",
+	"cpu", 
+	"memory",
+	"custom/pacman"
+    ],
+
+// Modules configuration
+   // Not being used right now
+   "custom/logo": {
+	"format": "󰣇",
+	"tooltip": false
+   },
+   "cpu": { 
+	"format": "󰍛 {usage}%", 
+	"tooltip": false
+    },
+    "memory": { 
+	"format": "󰘚 {}%"
+    },
+    // Not being used right now
+    "temperature": {
+	"critical-threshold": 80,
+	"format": "{temperatureC} °C {icon}",
+	"format-icons": ["󰉬", "", "󰉪"]
+    },
+    // Not being used right now
+    "backlight": {
+	"format": "{percent}% {icon}",
+	"format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    // Not being used right now
+    // Shows the status of sunsetr (day = inactive, night = active)
+    "custom/sunset": {
+        "interval": 60,
+        "exec": "status=$(sunsetr status); if echo \"$status\" | grep -qi \"Night\"; then echo '󰖔 Night'; else echo '󰖙 Day'; fi"
+    },
+    "custom/pacman": {
+	"format": " {}",
+	"interval": "once", //checks at startup and when it receives a signal
+	"exec": "checkupdates | wc -l", 
+	"on-click": "alacritty -e yay -Syu",
+	"signal": 8, 
+	"tooltip-format": "{} updates available"
+    },
+    "clock": { 
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format-alt": "{:%Y-%m-%d}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] }
+    },
+    "network": {
+    	"format-wifi": " ",
+ 	"format-ethernet": "󰈀",
+    	"format-disconnected": "󱐅",
+    	"tooltip-format": "{ipaddr}",
+    	"tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
+    	"tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+    	"tooltip-format-ethernet": "{bandwidthTotalBytes}",
+    	"on-click": "networkmanager_dmenu"
+    },
+    "network#speed": {
+    	"format": "{bandwidthDownBits}",
+    	"interval": 1,
+    	"tooltip-format": "{ipaddr}",
+    	"tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
+    	"tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
+    	"tooltip-format-disconnected": "Not Connected to any type of Network",
+    	"tooltip": true,
+    	"on-click": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu"
+  },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-full": "{icon}",
+        "format-charging": "󰃨",
+        "format-plugged": "",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    }
+}

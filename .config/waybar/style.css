@@ -1,0 +1,91 @@
+@import "colors/custom/mountains.css";
+/* Laying the foundation */
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    border: none;
+    border-radius: 0px;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}   
+
+/* Dynamic-island like design */
+.modules-center {
+    background: @bg0;
+    padding: 6px 12px;
+    border-radius: 28px;
+    box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background: @bg2;
+    border: 1px solid @bg3;
+    border-radius: 12px;
+}
+
+tooltip label {
+   color: @fg;
+   padding: 6px;
+}
+
+/* Erasing all the individual formatting of the modules */
+#clock, 
+#cpu,
+#memory,
+#custom-pacman,
+#pulseaudio,
+#network,
+#battery {
+    background: @bg0; 
+    padding: 0 8px;
+    margin: 0 5px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Defining the individual colors of the modules */
+#clock {
+   color: @fg;
+   margin: 0;
+}
+
+#cpu {
+   color: @orange;
+   margin: 0;
+}
+
+#memory {
+   color: @aqua;
+   margin: 0;
+}
+
+#custom-pacman {
+   color: @fg;
+   margin: 0;
+   font-size: 14px;
+}
+
+#pulseaudio {
+   color: @red;
+   margin: 0;
+   font-size: 17px;
+}
+
+#network {
+  color: @purple;
+  margin: 0;
+  font-size: 14px;
+}
+
+#battery {
+  color: @blue;
+  margin: 0;
+  font-size: 17px;
+}
+
