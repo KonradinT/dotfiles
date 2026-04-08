@@ -9,14 +9,31 @@
     padding: 0;
     margin: 0;
 }   
+/* This would keep the left modules together as a unit
+ * If you want this: go to the individual modules in question and make margin: 0; a
+ * and delete everything else except color and font-size.
+.modules-left {
+    background: @bg0;
+    padding: 6px 12px;
+    border-radius: 28px;
+    box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+} */
 
-/* Dynamic-island like design */
 .modules-center {
     background: @bg0;
     padding: 6px 12px;
     border-radius: 28px;
     box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
 }
+
+/* 
+.modules-right {
+    background: @bg0;
+    padding: 6px 12px;
+    border-radius: 28px;
+    box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+}
+*/
 
 window#waybar {
     background: transparent;
@@ -38,6 +55,7 @@ tooltip label {
 #cpu,
 #memory,
 #custom-pacman,
+#custom-logo,
 #pulseaudio,
 #network,
 #battery {
@@ -56,35 +74,61 @@ tooltip label {
 }
 
 #cpu {
-   color: @orange;
-   margin: 0;
+   color: @blue;
+   margin: 0 5px;
+   background: @bg0;
+   padding: 6px 12px;
+   border-radius: 28px;
+   box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+
 }
 
 #memory {
-   color: @aqua;
-   margin: 0;
+   color: @purple;
+   margin: 0 5px;
+   background: @bg0;
+   padding: 6px 12px;
+   border-radius: 28px;
+   box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+
 }
 
 #custom-pacman {
-   color: @fg;
-   margin: 0;
+   color: @red;
+   margin: 0 5px;
    font-size: 14px;
+   background: @bg0;
+   padding: 6px 12px;
+   border-radius: 28px;
+   box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+
+}
+
+#custom-logo {
+   color: @purple;
+   margin: 0 5px;
+   font-size: 17px;
+   background: @bg0;
+   padding: 6px 12px;
+   border-radius: 28px;
+   box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+
 }
 
 #pulseaudio {
-   color: @red;
+   color: @orange;
    margin: 0;
    font-size: 17px;
 }
 
 #network {
-  color: @purple;
+  color: @network;
   margin: 0;
   font-size: 14px;
 }
 
 #battery {
-  color: @blue;
+  color: @green;
   margin: 0;
   font-size: 17px;
 }

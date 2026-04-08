@@ -1,21 +1,25 @@
 {
 // General configuration
     "position": "top",
-    "margin-top": 18,
+    "margin-top": 14,
 
 // Order of the modules
+    "modules-left": [
+	"custom/logo",
+	"custom/pacman",
+    ],
     "modules-center": [
 	"clock",
 	"network",
 	"battery",
-	"pulseaudio",
-	"cpu", 
-	"memory",
-	"custom/pacman"
+	"pulseaudio"
+    ],
+    "modules-right": [
+	"cpu",
+	"memory"
     ],
 
 // Modules configuration
-   // Not being used right now
    "custom/logo": {
 	"format": "󰣇",
 	"tooltip": false
