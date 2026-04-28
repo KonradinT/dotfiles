@@ -12,3 +12,8 @@ PS1='[\u@\h \W]\$ '
 export EDITOR='nvim'
 export VISUAL='nvim'
 alias config='/usr/bin/git --git-dir=/home/konradin/dotfiles/ --work-tree=/home/konradin'
+alias sem='cd /home/konradin/Documents/BachelorInformatik/Semester_4'
+
+HISTSIZE=3000
+
+eval "$(starship init bash)"

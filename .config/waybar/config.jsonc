@@ -6,7 +6,7 @@
 // Order of the modules
     "modules-left": [
 	"custom/logo",
-	"custom/pacman",
+	"custom/pacman"
     ],
     "modules-center": [
 	"clock",

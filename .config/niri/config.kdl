@@ -82,7 +82,7 @@ layout {
 spawn-at-startup "sunsetr"
 spawn-at-startup "waybar"
 spawn-at-startup "mako" 
-spawn-at-startup "swaybg" "-i" "/home/konradin/Pictures/Wallpapers/pexels-ahmetyuksek-33571213.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/konradin/Pictures/Wallpapers/wp9022440-harry-potter-pc-4k-wallpapers.jpg" "-m" "fill"
 spawn-at-startup "udiskie" "--smarttray" 
 spawn-at-startup "swayidle" "-w" "timeout" "300" "/home/konradin/.config/niri/lock.sh"
 
@@ -98,13 +98,13 @@ animations {
 window-rule {
     match is-active=true
     draw-border-with-background false
-    opacity 0.85
+    opacity 1.0
 }
 
 window-rule {
     match is-active=false
     draw-border-with-background false 
-    opacity 0.7
+    opacity 1.0
 }
 
 window-rule {
